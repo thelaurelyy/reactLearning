@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content="ie=edge">
+    <title>Document</title>
+    <script src="./common/react.js"></script>
+    <script src="./common/react-dom.js"></script>
+    <script src="./common/browser.min.js"></script>
+</head>
+<body>
+    <div id="reactContainer"></div>
+
+    <script type="text/babel"> /* 注意type */
+        const HelloComponent = React.createClass({
+            render: function() {
+                // return React.createElement('h1', null, 'Hell, World');
+                return <h1>Hello World</h1>;
+
+                // 支持三目运算符和二元运算符
+                // return <h1>Hello {this.props.name ? this.props.name : 'world'} </h1>;
+            }
+        })
+
+        ReactDOM.render(
+            // React.createElement(HelloComponent, null),
+            <HelloComponent/>,
+            document.getElementById('reactContainer')
+        )
+    </script>
+</body>
+</html>
