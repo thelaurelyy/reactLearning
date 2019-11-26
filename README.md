@@ -74,6 +74,14 @@ JSX的好处：
     - componentWillUpdate(object nextProps, object nextState)
     - componentDidUpdate(object prevProps, object prevState)
     - componentWillUnmount()
+    
+- **注意：我在编写demo的时候犯了两个错误：**
+    - `this.state.count` <br /> 
+    变量统一进行状态管理，访问state数据的方法是"this.state.属性名"。而我写成了this.count。
+    
+    - `this.setState({count: this.state.count+1})` <br>
+    调用变更state数据的方法 this.setState({...}) 需要传入对象
+    
 
 
 
