@@ -6,6 +6,7 @@
 
 `ReactDOM.render()` ReactDOM.render是React的最基本方法，用于将模板转为HTML语言，并插入指定的DOM节点。
 
+
 #### 二、初始JSX语法
 
 JXS即JavaScript XML，它使用XML标记来创建虚拟DOM和声明组件。
@@ -26,7 +27,8 @@ JSX的好处：
 - JSX上的数组输出
    - JSX允许直接在模板插入JavaScript变量。如果这个变量是一个数组，则会展开这个数组的所有的成员。
 
-#### 四、React组件：state成员
+
+#### 四、React组件：state成员`（重要）`
 
 - React组件可以看做是 `带有props属性集合`和`state状态集合`并且`构造出一个虚拟DOM结构`的`对象`。
 
@@ -39,7 +41,8 @@ JSX的好处：
     1. getInitialState函数必须有返回值，可以是null，false，一个对象。
     2. 访问state数据的方法是"this.state.属性名"。
     3. 变量用{}包裹，不需要再加双引号。
-    
+
+  
 #### 五、React组件：props和render成员`（重要）`
 
 - `props`是组件固有的属性的集合，其数据由外部传入，一般在整个组件的生命周期中都是只读的。属性的初始值通常是由React.createElement函数或者JSX中标签的属性值进行传递，并合并到组件实例对象的this.props中。
@@ -49,12 +52,28 @@ JSX的好处：
 - props和state的区别：
     - props不能被其所在的组件修改，从父组件传递进来的属性不会在组件内部更改；
     - state只能在所在组件内部更改，或在外部调用setState函数对状态进行间接修改。
-    
+   
 - render成员函数
     - render是一个函数，对于组件来说，render成员函数是必需的。
     - render函数的主要流程是检测this.props和this.state,再返回一个单一组件实例。
     - render函数应该是纯粹的，也就是说，`在render函数内不应该修改组件state，不读写DOM信息，也不与浏览器交互。如果需要交互，应该在生命周期中进行交互`。(见demo_04)
 
+
+#### 六、React组件：生命周期`（重要）`
+
+- `一个组件完整的生命周期包含实例化阶段、活动阶段、销毁阶段三个阶段。`每个阶段又由相应的方法管理。
+
+- 过程中涉及三个主要的动作术语：
+    - mounting:表示正在挂接虚拟DOM到真实DOM。
+    - updating:表示正在被重新渲染。
+    - unmounting:表示正在将虚拟DOM移除真实DOM。
+    
+- 每个动作术语提供两个函数：
+    - componentWillMount()
+    - componentDidMount()
+    - componentWillUpdate(object nextProps, object nextState)
+    - componentDidUpdate(object prevProps, object prevState)
+    - componentWillUnmount()
 
 
 
