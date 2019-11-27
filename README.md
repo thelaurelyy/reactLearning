@@ -47,7 +47,7 @@ JSX的好处：
 
 - `props`是组件固有的属性的集合，其数据由外部传入，一般在整个组件的生命周期中都是只读的。属性的初始值通常是由React.createElement函数或者JSX中标签的属性值进行传递，并合并到组件实例对象的this.props中。
 
-- 通常固定的组件内只读的、应由父组件传递进来的属性适合放在props集合中，如组件的雷鸣、颜色、字体、事件响应回调函数等。
+- 通常固定的组件内只读的、应由父组件传递进来的属性适合放在props集合中，如组件的类名、颜色、字体、事件响应回调函数等。
 
 - props和state的区别：
     - props不能被其所在的组件修改，从父组件传递进来的属性不会在组件内部更改；
@@ -105,8 +105,28 @@ JSX的好处：
 - 注意编写格式规范：
     - render函数的返回值最好用 () 括起来；
     - 变量或表达式需要用 {} 包裹；
-    
+    - React.Child.map(nodeList. function(){...})
 
+
+#### 九、React组件：props属性验证
+
+- propTypes：react引入了propTypes机制，来规范外界父级组件传递进来的数据属性
+
+```
+      // 注意大小写！
+      propTypes: {
+         title: React.PropTypes.string.isRequired
+     },
+```
+
+- getDefaultProps：设置组件属性默认值
+
+
+#### 十、React组件：获取真实DOM节点
+
+- this.refs.\[refName]
+
+- 注意一定要组件挂载完成，才能操作DOM节点
 
 
 
