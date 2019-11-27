@@ -81,7 +81,13 @@ JSX的好处：
     
     - `this.setState({count: this.state.count+1})` <br>
     调用变更state数据的方法 this.setState({...}) 需要传入对象
-    
+
+#### 七、React练习实例（见demo_07）  
+
+- 切记： getInitialState的返回值只能是null、false、对象  
+- this.state.opacity
+- this.setState({...})
+- this.props.name
 
 
 
