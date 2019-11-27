@@ -13,30 +13,22 @@
     <div id="container"></div>
 
     <script type="text/babel">
-        const MyTitle = React.createClass({
-            propTypes: {
-                title: React.PropTypes.string.isRequired
-            },
-            getDefaultProps: function() {
-                return {
-                    title: 'happy everyday ~',
-                    content: 'at ease, all you want time will give you ~'
-                }
+        const MyComponent = React.createClass({
+            handleClick: function () {
+                this.refs.myTextInput.focus();
             },
             render: function () {
                 return (
-                    <div>
-                        <h2>{this.props.title}</h2>
-                        <div>{this.props.content}</div>
-                    </div>
+                    <p>
+                        <input type="text" ref="myTextInput" />
+                        <button onClick={this.handleClick}>Focus the text input</button>
+                    </p>
                 )
             }
         });
 
-        // const title = 'happy Wednesday ~';
-        const title = 123;
         ReactDOM.render(
-            <MyTitle title={title} />,
+            <MyComponent />,
             document.getElementById('container')
         )
     </script>
