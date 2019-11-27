@@ -82,12 +82,32 @@ JSX的好处：
     - `this.setState({count: this.state.count+1})` <br>
     调用变更state数据的方法 this.setState({...}) 需要传入对象
 
+
 #### 七、React练习实例（见demo_07）  
 
 - 切记： getInitialState的返回值只能是null、false、对象  
 - this.state.opacity
 - this.setState({...})
 - this.props.name
+
+
+#### 八、React组件：this.props.children
+
+- this.props对象的属性与组件的属性一一对应，但有一个例外，就是this.props.children。`它表示组件所有的子节点。`
+
+- 注意：this.props.children的值有三种可能：
+    - 1、没有子节点：undefined；
+    - 2、一个子节点：数据类型是object；
+    - 3、多个子节点：数据类型是array；
+
+- 对this.props.state进行数据处理的时候要小心
+
+- 注意编写格式规范：
+    - render函数的返回值最好用 () 括起来；
+    - 变量或表达式需要用 {} 包裹；
+    
+
+
 
 
 
