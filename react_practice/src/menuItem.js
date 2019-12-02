@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class MenuItem extends Component{
     constructor(props) { // constructor 绑定this方法
-        super(props)
+        super(props);
         this.handleClick = this.handleClick.bind(this)
     }
     render() {
