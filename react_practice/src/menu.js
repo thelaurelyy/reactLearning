@@ -2,10 +2,10 @@ import React, { Component, Fragment } from 'react'
 
 class Menu extends Component{
     constructor(props) {
-        super(props)
+        super(props) // 调用父类的构造函数，固定写法
         this.state = {
             inputValue: '',
-            menuList: []
+            menuList: ['酸菜鱼', '芋头蒸肉']
         }
     }
     iptChange(e) {
@@ -18,16 +18,24 @@ class Menu extends Component{
             inputValue: e.target.value
         })
     }
+    addList() {
+        this.setState({
+            menuList: [...this.state.menuList, this.state.inputValue]
+        })
+    }
     render() {
         return (
             <Fragment>
                 <div>
                     <input value={this.state.inputValue} onChange={this.iptChange.bind(this)}/>
-                    <button>增加菜单</button>
+                    <button onClick={this.addList.bind(this)}>增加菜单</button>
                 </div>
                 <ul>
-                    <li>鱼香肉丝</li>
-                    <li>麻辣小龙虾</li>
+                    {
+                        this.state.menuList.map((item, index) => {
+                            return <li key={index}>{item}</li>
+                        })
+                    }
                 </ul>
             </Fragment>
         )
