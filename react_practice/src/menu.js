@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react'
+import './style.css'
 
 class Menu extends Component{
     constructor(props) {
-        super(props) // 调用父类的构造函数，固定写法
+        super(props); // 调用父类的构造函数，固定写法
         this.state = {
             inputValue: '',
             menuList: ['酸菜鱼', '芋头蒸肉']
@@ -10,7 +11,7 @@ class Menu extends Component{
     }
     iptChange(e) {
         // 错误写法：
-        console.log(e.target.value);
+        // console.log(e.target.value);
         // this.state.inputValue = e.target.value;
 
         //  正确写法：
@@ -34,15 +35,24 @@ class Menu extends Component{
     render() {
         return (
             <Fragment>
+                {/*正确注释的写法*/}
+                {
+                    // 或者写成这样也可以
+                }
                 <div>
-                    <input value={this.state.inputValue} onChange={this.iptChange.bind(this)}/>
-                    <button onClick={this.addList.bind(this)}>增加菜单</button>
+                    <label htmlFor="ipt-menu">加入菜单：</label> <br/>
+                    <input id="ipt-menu" value={this.state.inputValue} onChange={this.iptChange.bind(this)}/>
+                    <button className="btn-add" onClick={this.addList.bind(this)}>增加菜单</button>
                 </div>
                 <ul>
                     {
                         this.state.menuList.map((item, index) => {
                             return (
-                                <li key={index} onClick={this.deleteItem.bind(this, index)}>{item}</li>
+                                <li
+                                    key={index}
+                                    onClick={this.deleteItem.bind(this, index)}
+                                    dangerouslySetInnerHTML={{__html: item}}
+                                ></li>
                             )
                         })
                     }
