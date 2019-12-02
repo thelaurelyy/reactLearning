@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import './style.css'
+import MenuItem from "./menuItem";
 
 class Menu extends Component{
     constructor(props) {
@@ -21,7 +22,8 @@ class Menu extends Component{
     }
     addList() {
         this.setState({
-            menuList: [...this.state.menuList, this.state.inputValue]
+            menuList: [...this.state.menuList, this.state.inputValue],
+            inputValue: ''
         })
     }
     deleteItem(index) {
@@ -47,12 +49,13 @@ class Menu extends Component{
                 <ul>
                     {
                         this.state.menuList.map((item, index) => {
+                            // return <li
+                            //         key={index}
+                            //         onClick={this.deleteItem.bind(this, index)}
+                            //         dangerouslySetInnerHTML={{__html: item}}></li>
+
                             return (
-                                <li
-                                    key={index}
-                                    onClick={this.deleteItem.bind(this, index)}
-                                    dangerouslySetInnerHTML={{__html: item}}
-                                ></li>
+                                <li><MenuItem /></li>
                             )
                         })
                     }
