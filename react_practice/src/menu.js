@@ -23,6 +23,14 @@ class Menu extends Component{
             menuList: [...this.state.menuList, this.state.inputValue]
         })
     }
+    deleteItem(index) {
+        console.log('index', index);
+        let tempList = this.state.menuList;
+        tempList.splice(index, 1);
+        this.setState({
+            menuList: tempList
+        })
+    }
     render() {
         return (
             <Fragment>
@@ -33,7 +41,9 @@ class Menu extends Component{
                 <ul>
                     {
                         this.state.menuList.map((item, index) => {
-                            return <li key={index}>{item}</li>
+                            return (
+                                <li key={index} onClick={this.deleteItem.bind(this, index)}>{item}</li>
+                            )
                         })
                     }
                 </ul>
