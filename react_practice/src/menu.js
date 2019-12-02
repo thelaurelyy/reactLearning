@@ -55,7 +55,10 @@ class Menu extends Component{
                             //         dangerouslySetInnerHTML={{__html: item}}></li>
 
                             return (
-                                <li key={index}><MenuItem content={item} /></li>
+                                <li key={index}>
+                                    {/*注意：deleteItem传递给子组件时也需要绑定this*/}
+                                    <MenuItem content={item} index={index} deleteItem={this.deleteItem.bind(this)} />
+                                </li>
                             )
                         })
                     }
