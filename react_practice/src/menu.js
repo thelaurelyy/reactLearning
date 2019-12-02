@@ -55,7 +55,7 @@ class Menu extends Component{
                             //         dangerouslySetInnerHTML={{__html: item}}></li>
 
                             return (
-                                <li><MenuItem /></li>
+                                <li key={index}><MenuItem content={item} /></li>
                             )
                         })
                     }
