@@ -57,9 +57,7 @@ class Menu extends Component{
                             return (
                                 <li key={index}>
                                     {/*注意：deleteItem传递给子组件时也需要绑定this*/}
-                                    <MenuItem content={item} index={index} deleteItem={this.deleteItem.bind(this)}
-                                              menuList={this.state.menuList}
-                                    />
+                                    <MenuItem content={item} index={index} deleteItem={this.deleteItem.bind(this)} />
                                 </li>
                             )
                         })
