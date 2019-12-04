@@ -7,14 +7,24 @@ class MenuItem extends Component{
         this.handleClick = this.handleClick.bind(this)
     }
     render() {
+        console.log('child-render');
         return (
             <div onClick={this.handleClick}>{this.props.content}：{this.props.price} 元</div>
         )
     }
+    shouldComponentUpdate(nextProps, nextState, nextContext) {
+        if(nextProps.content !== this.props.content) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     handleClick() {
         // console.log(this.props.index)
         this.props.deleteItem(this.props.index)
     }
+
 }
 
 // MenuItem.PropTypes = {   // 错误写法

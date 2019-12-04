@@ -8,7 +8,7 @@ import LifeParent from "./lifeParent";
 
 // ReactDOM.render(<App />,document.getElementById('root'))
 
-// ReactDOM.render(<Menu />, document.getElementById('root'))
+ReactDOM.render(<Menu />, document.getElementById('root'))
 
-ReactDOM.render(<LifeParent />, document.getElementById('root'));
+// ReactDOM.render(<LifeParent />, document.getElementById('root'));
 
