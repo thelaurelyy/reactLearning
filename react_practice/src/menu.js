@@ -25,7 +25,10 @@ class Menu extends Component{
         this.setState({
             menuList: [...this.state.menuList, this.state.inputValue],
             inputValue: ''
+        }, ()=>{
+            console.log(this.ul01.querySelectorAll('div').length)
         })
+
     }
     deleteItem(index) {
         console.log('index', index);
@@ -50,7 +53,7 @@ class Menu extends Component{
 
                     <button className="btn-add" onClick={this.addList.bind(this)}>增加菜单</button>
                 </div>
-                <ul>
+                <ul ref={(ul)=>{this.ul01 = ul}}>
                     {
                         this.state.menuList.map((item, index) => {
                             // return <li
