@@ -10,7 +10,7 @@ class ChildLife extends Component{
         console.log('child，2------------->componentWillMount');
     }
     render() {
-        console.log('child，3------------->render')
+        console.log('child，3------------->render');
         return (
             <div>
                 {this.props.childName}
@@ -21,7 +21,7 @@ class ChildLife extends Component{
         console.log('child，4------------->componentDidMount')
     }
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log('child，5------------->shouldComponentUpdate')
+        console.log('child，5------------->shouldComponentUpdate');
         return true
     }
     componentWillUpdate(nextProps, nextState, nextContext) {

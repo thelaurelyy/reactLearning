@@ -6,14 +6,14 @@ class ParentLife extends Component{
         super(props);
         this.state = {
             list: ['child_01', 'child_02', 'child_03']
-        }
+        };
         console.log('parent，1------------->init state and props');
     }
     componentWillMount() {
         console.log('parent，2------------->componentWillMount');
     }
     render() {
-        console.log('parent，3------------->render')
+        console.log('parent，3------------->render');
         return (
             <div>
                 {
@@ -23,7 +23,7 @@ class ParentLife extends Component{
                         )
                     })
                 }
-                <button onClick={this.handleClick.bind(this)}>change state</button> 
+                <button onClick={this.handleClick.bind(this)}>change state</button>
                 <button onClick={this.handleDelete.bind(this)}>delete state</button>
             </div>
         )
@@ -32,7 +32,7 @@ class ParentLife extends Component{
         console.log('parent，4------------->componentDidMount')
     }
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        console.log('parent，5------------->shouldComponentUpdate')
+        console.log('parent，5------------->shouldComponentUpdate');
         return true
     }
     componentWillUpdate(nextProps, nextState, nextContext) {
@@ -54,8 +54,8 @@ class ParentLife extends Component{
         })
     }
     handleDelete() {
-        let tempList = this.state.list
-        tempList.splice(0, 1)
+        let tempList = this.state.list;
+        tempList.splice(0, 1);
         this.setState({
             list: tempList
         })
