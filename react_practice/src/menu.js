@@ -17,7 +17,8 @@ class Menu extends Component{
 
         //  正确写法：
         this.setState({
-            inputValue: e.target.value
+            // inputValue: e.target.value
+            inputValue: this.ipt01.value
         })
     }
     addList() {
@@ -43,7 +44,10 @@ class Menu extends Component{
                 }
                 <div>
                     <label htmlFor="ipt-menu">加入菜单：</label> <br/>
-                    <input id="ipt-menu" value={this.state.inputValue} onChange={this.iptChange.bind(this)}/>
+                    <input id="ipt-menu" value={this.state.inputValue}
+                           onChange={this.iptChange.bind(this)}
+                           ref={(input)=>{this.ipt01 = input}} />
+
                     <button className="btn-add" onClick={this.addList.bind(this)}>增加菜单</button>
                 </div>
                 <ul>
