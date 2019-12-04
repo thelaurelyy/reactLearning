@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-class ChildLife extends Component{
+class LifeChild extends Component{
     constructor(props) {
         super(props);
         console.log('child，1------------->init state and props');
@@ -38,4 +38,4 @@ class ChildLife extends Component{
     }
 }
 
-export default ChildLife
+export default LifeChild

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import ChildLife from "./childLife";
+import LifeChild from "./lifeChild";
 
-class ParentLife extends Component{
+class LifeParent extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -19,7 +19,7 @@ class ParentLife extends Component{
                 {
                     this.state.list.map((item, index) => {
                         return (
-                            <ChildLife key={index} childName={item} />
+                            <LifeChild key={index} childName={item} />
                         )
                     })
                 }
@@ -62,4 +62,4 @@ class ParentLife extends Component{
     }
 }
 
-export default ParentLife
+export default LifeParent
