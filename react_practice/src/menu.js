@@ -75,9 +75,12 @@ class Menu extends Component{
         )
     }
     componentDidMount() {
-        axios.post('https://web-api.juejin.im/v3/web/wbbr/bgeda')
+        axios.post(' https://www.easy-mock.com/mock/5de8744789c8451dc927ee11/reactLearning/getMenuList')
             .then((res)=>{
                 console.log('axios 获取数据成功：', JSON.stringify(res))
+                this.setState({
+                    menuList: res.data.data
+                })
             })
             .catch((error)=>{
                 console.log('axios 获取数据失败：', error)
