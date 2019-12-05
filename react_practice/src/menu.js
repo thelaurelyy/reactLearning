@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import axios from 'axios'
 import './style.css'
 import MenuItem from "./menuItem";
 
@@ -72,6 +73,15 @@ class Menu extends Component{
                 </ul>
             </Fragment>
         )
+    }
+    componentDidMount() {
+        axios.post('https://web-api.juejin.im/v3/web/wbbr/bgeda')
+            .then((res)=>{
+                console.log('axios 获取数据成功：', JSON.stringify(res))
+            })
+            .catch((error)=>{
+                console.log('axios 获取数据失败：', error)
+            })
     }
 }
 
