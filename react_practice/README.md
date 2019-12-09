@@ -27,12 +27,19 @@
 
 ##### Updation更新阶段的生命周期函数
 1、props属性改变
+
 2、state属性改变
 
 - shouldComponentUpdate 会在组件更新之前，自动被执行。`它要求返回一个布尔类型的结果，必须有返回值。`
 - componentWillUpdate 如果shouldComponentUpdate返回false，则这个函数不会被执行。
 - componentDidUpdate 组件更新之后执行，它是组件更新的最后一个环节。
 - componentWillReceiveProps 子组件接收到父组件传递过来的参数，父组件render函数重新被执行，这个生命周期就会被执行。
+
+3、可以详细了解运行一下lifeParent和lifeChild中的例子
+
+
+#### 3、React中的动画
+
 
 
 

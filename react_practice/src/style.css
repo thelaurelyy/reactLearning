@@ -3,5 +3,41 @@
     color: #ffffff;
 }
 
-.show { opacity: 1; transition: all 1.5s ease-in; }
-.hide { opacity: 0; transition: all 1.5s ease-in; }
+/*.show { opacity: 1; transition: all 1.5s ease-in; }*/
+/*.hide { opacity: 0; transition: all 1.5s ease-in; }*/
+
+.show { animation: show-item 2s ease-in forwards; }
+.hide { animation: hide-item 2s ease-in forwards; }
+
+/*forwards 控制画面停在最后一帧*/
+
+
+@keyframes hide-item {
+    0% {
+        opacity: 1;
+        color: yellow;
+    }
+    50% {
+        opacity: 0.5;
+        color: red;
+    }
+    100% {
+        opacity: 0;
+        color: green;
+    }
+}
+
+@keyframes show-item {
+    0% {
+        opacity: 0;
+        color: yellow;
+    }
+    50% {
+        opacity: 0.5;
+        color: red;
+    }
+    100% {
+        opacity: 1;
+        color: green;
+    }
+}
