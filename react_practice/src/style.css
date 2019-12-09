@@ -2,3 +2,6 @@
     background: dodgerblue;
     color: #ffffff;
 }
+
+.show { opacity: 1; transition: all 1.5s ease-in; }
+.hide { opacity: 0; transition: all 1.5s ease-in; }
