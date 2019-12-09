@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import axios from 'axios'
 import './style.css'
 import MenuItem from "./menuItem";
+import Transition from './css-transition'
 
 import Boss from "./Boss";
 
@@ -73,7 +74,8 @@ class Menu extends Component{
                         })
                     }
                 </ul>
-                <Boss />
+                <Boss /> <br/>
+                <Transition />
             </Fragment>
         )
     }
