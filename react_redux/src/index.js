@@ -5,9 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 
-
-
-ReactDom.render(<TodoList />, document.getElementById('root'))
+ReactDom.render(<TodoList />, document.getElementById('root'));
 
 
 
