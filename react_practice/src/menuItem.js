@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 class MenuItem extends Component{
     constructor(props) { // constructor 绑定this方法
         super(props);
+        this.state = {
+          testA: '168'
+        };
         this.handleClick = this.handleClick.bind(this)
     }
     render() {
