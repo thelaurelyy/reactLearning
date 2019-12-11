@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import TodoListUi from './TodoListUi'
+// import TodoListUi from './TodoListUi'
+import TodoListStateless from "./TodoListStateless";
 import store from './store/index'
 import { changeInputAction, addItemAction, deleteItemAction } from "./store/actionCreators";
 
@@ -18,8 +19,20 @@ class TodoList extends Component {
         store.subscribe(this.storeChange) // 订阅Redux的状态
     }
     render() {
+        // UI组件
+        // return (
+        //     <TodoListUi
+        //         inputValue={this.state.inputValue}
+        //         list={this.state.list}
+        //         changeInputValue={this.changeInputValue}
+        //         clickBtn={this.clickBtn}
+        //         deleteItem={this.deleteItem}
+        //     />
+        // )
+
+        // 无状态组件
         return (
-            <TodoListUi
+            <TodoListStateless
                 inputValue={this.state.inputValue}
                 list={this.state.list}
                 changeInputValue={this.changeInputValue}
