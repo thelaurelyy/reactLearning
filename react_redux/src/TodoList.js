@@ -2,13 +2,8 @@ import React, { Component } from 'react';
 import 'antd/dist/antd.css'
 import { Input, Button, List } from 'antd'
 import store from './store/index'
-import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM } from './store/actionTypes'
+import { changeInputAction, addItemAction, deleteItemAction } from "./store/actionCreators";
 
-// const data = [
-//     '早晨8点开晨会，分配今天的开发工作',
-//     '早9点和项目经理作开发需求讨论会',
-//     '晚5：30对今日代码进行review'
-// ]
 
 class TodoList extends Component {
     constructor(props) {
@@ -42,27 +37,18 @@ class TodoList extends Component {
         )
     }
     changeInputValue(e) {
-        console.log(e.target.value);
-        const action = {
-            type: CHANGE_INPUT,
-            value: e.target.value
-        };
+        const action = changeInputAction(e.target.value);
         store.dispatch(action) // 发布action
     }
     storeChange() {
         this.setState(store.getState())
     }
     clickBtn() {
-        const action = {
-            type: ADD_ITEM
-        };
+        const action = addItemAction();
         store.dispatch(action)
     }
     deleteItem(index) {
-        const action = {
-            type: DELETE_ITEM,
-            index
-        };
+        const action = deleteItemAction(index);
         store.dispatch(action)
     }
 }
