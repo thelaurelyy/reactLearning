@@ -7,3 +7,5 @@ export const ADD_ITEM = 'addItem';
 // 删除List元素
 export const DELETE_ITEM = 'deleteItem';
 
+// 获取List数据
+export const GET_LIST = 'getList';

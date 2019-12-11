@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 // import TodoListUi from './TodoListUi'
 import TodoListStateless from "./TodoListStateless";
+import axios from 'axios'
 import store from './store/index'
-import { changeInputAction, addItemAction, deleteItemAction } from "./store/actionCreators";
+import { changeInputAction, addItemAction, deleteItemAction, getListAction } from "./store/actionCreators";
+
 
 
 class TodoList extends Component {
@@ -17,6 +19,13 @@ class TodoList extends Component {
         this.deleteItem = this.deleteItem.bind(this);
 
         store.subscribe(this.storeChange) // 订阅Redux的状态
+    }
+    componentDidMount() {
+        axios.get('https://www.easy-mock.com/mock/5cfcce489dc7c36bd6da2c99/xiaojiejie/getList').then((res)=>{
+            console.log(res);
+            const action = getListAction(res.data);
+            store.dispatch(action)
+        })
     }
     render() {
         // UI组件
