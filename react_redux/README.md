@@ -18,3 +18,11 @@ UI层订阅接收数据，修改state并展示在界面上
 
 - 3、在storeChange方法中通过store.getState()获取更新后的数据，
 并通过this.setState()更新状态
+
+> 新手最容易犯的错误：
+>
+> 1、store必须是唯一的，多个store是坚决不允许，只能有一个store空间；
+>
+> 2、只有store能改变自己的内容，reducer只能接收和传递新的变量，不能改变原状态；
+>
+> 3、Reducer必须是纯函数
