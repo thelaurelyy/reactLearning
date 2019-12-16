@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb47e0e-eaa3-48ad-88e6-bf621962694e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/List.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576468229322</updated>
       <workItem from="1576468230533" duration="8000" />
-      <workItem from="1576475084800" duration="4209000" />
+      <workItem from="1576475084800" duration="4336000" />
     </task>
     <task id="LOCAL-00001" summary="【Router】安装Router环境并编写简单的例子">
       <created>1576477804096</created>
@@ -66,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576477804096</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="【Router】（1）将无状态组件改写为UI组件；（2）路由动态传递参数；">
+      <created>1576479398619</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576479398619</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +91,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="【Router】安装Router环境并编写简单的例子" />
-    <option name="LAST_COMMIT_MESSAGE" value="【Router】安装Router环境并编写简单的例子" />
+    <MESSAGE value="【Router】（1）将无状态组件改写为UI组件；（2）路由动态传递参数；" />
+    <option name="LAST_COMMIT_MESSAGE" value="【Router】（1）将无状态组件改写为UI组件；（2）路由动态传递参数；" />
   </component>
 </project>
