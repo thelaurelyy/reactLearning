@@ -10,7 +10,7 @@ import { changeInputAction, addItemAction, deleteItemAction/*, getListAction*/, 
 class TodoList extends Component {
     constructor(props) {
         super(props);
-        // store中的数据不要直接使用在UI层
+        // store中的数据不要直接使用在UI层  
         // 可以直接复制给组件的state
         this.state = store.getState();
         this.changeInputValue = this.changeInputValue.bind(this);
