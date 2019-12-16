@@ -1,5 +1,5 @@
 import React, { Component }  from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 class Index extends Component {
     constructor(props) {
@@ -10,11 +10,17 @@ class Index extends Component {
                 { uid: 456, title: 'yy的测试demo-2' },
                 { uid: 789, title: 'yy的测试demo-3' },
             ]
-        }
+        };
+        // 编程式重定向
+        this.props.history.push('/home/')
     }
     render() {
         return (
             <ul>
+                {/*
+                    Redirect 重定向
+                    <Redirect to='/home/' />
+                */}
                 {
                     this.state.list.map((item, index) => {
                         return (
