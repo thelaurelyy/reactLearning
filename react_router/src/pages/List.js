@@ -8,7 +8,7 @@ class List extends Component {
         }
     }
     render() {
-        return (
+        return (    
             <div>
                 <h2> List page.</h2>
                 <h3> page id is -> {this.state.id}</h3>

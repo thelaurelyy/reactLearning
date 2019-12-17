@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb47e0e-eaa3-48ad-88e6-bf621962694e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/List.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +25,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react_router_nesting" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -57,7 +54,8 @@
       <updated>1576468229322</updated>
       <workItem from="1576468230533" duration="8000" />
       <workItem from="1576475084800" duration="6672000" />
-      <workItem from="1576489787700" duration="1285000" />
+      <workItem from="1576489787700" duration="2592000" />
+      <workItem from="1576551130378" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="【Router】安装Router环境并编写简单的例子">
       <created>1576477804096</created>
@@ -87,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576480456581</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="【Router】实现网页重定向的两种方式：（1）Redirect重定向；（2）this.props.history.push('/home/');">
+      <created>1576492147557</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576492147557</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +115,7 @@
     <MESSAGE value="【Router】安装Router环境并编写简单的例子" />
     <MESSAGE value="【Router】（1）将无状态组件改写为UI组件；（2）路由动态传递参数；" />
     <MESSAGE value="【Router】路由动态传参的简单demo；" />
-    <option name="LAST_COMMIT_MESSAGE" value="【Router】路由动态传参的简单demo；" />
+    <MESSAGE value="【Router】实现网页重定向的两种方式：（1）Redirect重定向；（2）this.props.history.push('/home/');" />
+    <option name="LAST_COMMIT_MESSAGE" value="【Router】实现网页重定向的两种方式：（1）Redirect重定向；（2）this.props.history.push('/home/');" />
   </component>
 </project>
