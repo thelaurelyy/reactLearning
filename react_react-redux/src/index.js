@@ -8,7 +8,7 @@ const App = (
     <Provider store={store}>
         <TodoList />
     </Provider>
-)
+);
 
 ReactDOM.render( App, document.getElementById('root'));
 
