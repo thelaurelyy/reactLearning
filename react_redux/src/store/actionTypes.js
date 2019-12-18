@@ -9,3 +9,6 @@ export const DELETE_ITEM = 'deleteItem';
 
 // 获取List数据
 export const GET_LIST = 'getList';
+
+// 使用saga中间件处理数据请求，获取list
+export const GET_LIST_WITH_SAGA = 'getListWithSage';

@@ -7,13 +7,12 @@ import mySagas from './sagas'
 
 // 创建增强器
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}) : compose;
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}):compose
 
 
 // redux-saga 中间件
 const sagaMiddleware = createSagaMiddleware();
-const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware ));
-sagaMiddleware.run(mySagas);
+const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware))
 
 
 // redux-thunk 中间件
@@ -27,6 +26,8 @@ const store = createStore(
     // applyMiddleware(thunk),
     // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
+
+sagaMiddleware.run(mySagas)
 
 
 // 暴露出去

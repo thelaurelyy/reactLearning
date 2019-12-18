@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM, GET_LIST } from './actionTypes';
+import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM, GET_LIST, GET_LIST_WITH_SAGA } from './actionTypes';
 
 export const changeInputAction = (value) => ({
     type: CHANGE_INPUT,
@@ -31,3 +31,8 @@ export const getTodoList = () => {
             });
     }
 };
+
+// 使用saga中间件处理数据请求，获取list
+export const getListActionWithSage = () => ({
+    type: GET_LIST_WITH_SAGA,
+});

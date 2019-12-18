@@ -3,7 +3,13 @@ import React, { Component } from 'react';
 import TodoListStateless from "./TodoListStateless";
 // import axios from 'axios'
 import store from './store/index'
-import { changeInputAction, addItemAction, deleteItemAction/*, getListAction*/, getTodoList } from "./store/actionCreators"
+import { changeInputAction,
+    addItemAction,
+    deleteItemAction,
+    /*getListAction,
+    getTodoList,*/
+    getListActionWithSage
+} from "./store/actionCreators"
 
 
 
@@ -20,19 +26,24 @@ class TodoList extends Component {
 
         store.subscribe(this.storeChange) // 订阅Redux的状态
     }
-    // use redux-saga instead of redux-thunk
-    // componentDidMount() {
-    //     // axios.get('https://www.easy-mock.com/mock/5cfcce489dc7c36bd6da2c99/xiaojiejie/getList').then((res)=>{
-    //     //     console.log(res);
-    //     //     const action = getListAction(res.data);
-    //     //     store.dispatch(action)
-    //     // })
-    //
-    //     // use redux-thunk handle axios request
-    //     const action = getTodoList(); // 这里的action是一个函数
-    //     console.log(action)
-    //     store.dispatch(action);
-    // }
+    componentDidMount() {
+        // axios.get('https://www.easy-mock.com/mock/5cfcce489dc7c36bd6da2c99/xiaojiejie/getList').then((res)=>{
+        //     console.log(res);
+        //     const action = getListAction(res.data);
+        //     store.dispatch(action)
+        // })
+
+        // use redux-thunk handle axios request
+        // const action = getTodoList(); // 这里的action是一个函数
+        // console.log(action)
+        // store.dispatch(action);
+
+        // use redux-saga instead of redux-thunk
+        const action = getListActionWithSage();
+        store.dispatch(action);
+        console.log(action);
+
+    }
     render() {
         // UI组件
         // return (
