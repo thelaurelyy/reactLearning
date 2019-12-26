@@ -1,6 +1,4 @@
-### React-Redux
+### React-Hooks
 
-        export default connect(stateToProps,dispatchToProps)(TodoList);
-        
-connect的作用是把UI组件（无状态组件）和业务逻辑代码的分开，然后通过connect再链接到一起，让代码更加清晰和易于维护。
-这也是React-Redux最大的优点。
+- 1、useState 是react自带的一个钩子函数，它的作用是用来声明状态变量；
+- 2、React Hooks不能出现在条件判断语句中，因为它必须有完全一样的渲染顺序；
