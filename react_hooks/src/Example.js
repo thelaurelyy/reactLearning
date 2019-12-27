@@ -8,6 +8,13 @@ class Example extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log(`ComponentDidMount => You clicked ${this.state.count} times`)
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(`componentDidUpdate => You clicked ${this.state.count} times`)
+    }
+
     render() {
         return (
             <div>
