@@ -3898,7 +3898,7 @@ function getListeningForDocument(mountAt) {
 
 /**
  * `ReactBrowserEventEmitter` is used to attach top-level event listeners. For
- * example:
+ * example_replace-redux:
  *
  *   ReactBrowserEventEmitter.putListener('myID', 'onClick', myFunction);
  *
@@ -3947,7 +3947,7 @@ var ReactBrowserEventEmitter = assign({}, ReactEventEmitterMixin, {
    * Firefox v8.01 (and possibly others) exhibited strange behavior when
    * mounting `onmousemove` events at some node that was not the document
    * element. The symptoms were that if your mouse is not moving over something
-   * contained within that mount point (for example on the background) the
+   * contained within that mount point (for example_replace-redux on the background) the
    * top-level listeners for `onmousemove` won't be called. However, if you
    * register the `mousemove` on the document object, then it will of course
    * catch all `mousemove`s. This along with iOS quirks, justifies restricting
@@ -6432,7 +6432,7 @@ function assertValidProps(component, props) {
     "development" !== 'production' ? warning(props.innerHTML == null, 'Directly setting property `innerHTML` is not permitted. ' + 'For more information, lookup documentation on `dangerouslySetInnerHTML`.') : undefined;
     "development" !== 'production' ? warning(!props.contentEditable || props.children == null, 'A component is `contentEditable` and contains `children` managed by ' + 'React. It is now your responsibility to guarantee that none of ' + 'those nodes are unexpectedly modified or duplicated. This is ' + 'probably not intentional.') : undefined;
   }
-  !(props.style == null || typeof props.style === 'object') ? "development" !== 'production' ? invariant(false, 'The `style` prop expects a mapping from style properties to values, ' + 'not a string. For example, style={{marginRight: spacing + \'em\'}} when ' + 'using JSX.%s', getDeclarationErrorAddendum(component)) : invariant(false) : undefined;
+  !(props.style == null || typeof props.style === 'object') ? "development" !== 'production' ? invariant(false, 'The `style` prop expects a mapping from style properties to values, ' + 'not a string. For example_replace-redux, style={{marginRight: spacing + \'em\'}} when ' + 'using JSX.%s', getDeclarationErrorAddendum(component)) : invariant(false) : undefined;
 }
 
 function enqueuePutListener(id, registrationName, listener, transaction) {
@@ -10395,7 +10395,7 @@ var ReactInstanceHandles = {
 
   /**
    * Traverse a node ID, calling the supplied `cb` for each ancestor ID. For
-   * example, passing `.0.$row-0.1` would result in `cb` getting called
+   * example_replace-redux, passing `.0.$row-0.1` would result in `cb` getting called
    * with `.0`, `.0.$row-0`, and `.0.$row-0.1`.
    *
    * NOTE: This traversal happens on IDs without touching the DOM.
@@ -12470,7 +12470,7 @@ var getIteratorFn = _dereq_(115);
  *   decl := ReactPropTypes.{type}(.isRequired)?
  *
  * Each and every declaration produces a function with the same signature. This
- * allows the creation of custom validation functions. For example:
+ * allows the creation of custom validation functions. For example_replace-redux:
  *
  *  var MyLink = React.createClass({
  *    propTypes: {
@@ -16894,7 +16894,7 @@ if (ExecutionEnvironment.canUseDOM) {
         // \uFEFF has the potential advantage of being zero-width/invisible.
         // UglifyJS drops U+FEFF chars when parsing, so use String.fromCharCode
         // in hopes that this is preserved even if "\uFEFF" is transformed to
-        // the actual Unicode character (by Babel, for example).
+        // the actual Unicode character (by Babel, for example_replace-redux).
         // https://github.com/mishoo/UglifyJS2/blob/v2.4.20/lib/parse.js#L216
         node.innerHTML = String.fromCharCode(0xFEFF) + html;
 
@@ -17216,7 +17216,7 @@ if ("development" !== 'production') {
   // Note: this does not catch all invalid nesting, nor does it try to (as it's
   // not clear what practical benefit doing so provides); instead, we warn only
   // for cases where the parser will give a parse tree differing from what React
-  // intended. For example, <b><div></div></b> is invalid but we don't warn
+  // intended. For example_replace-redux, <b><div></div></b> is invalid but we don't warn
   // because it still parses correctly; we do warn for other cases like nested
   // <p> tags where the beginning of the second element implicitly closes the
   // first, causing a confusing mess.
@@ -17693,7 +17693,7 @@ module.exports = ExecutionEnvironment;
 var _hyphenPattern = /-(.)/g;
 
 /**
- * Camelcases a hyphenated string, for example:
+ * Camelcases a hyphenated string, for example_replace-redux:
  *
  *   > camelize('background-color')
  *   < "backgroundColor"
@@ -17728,7 +17728,7 @@ var camelize = _dereq_(131);
 var msPattern = /^-ms-/;
 
 /**
- * Camelcases a hyphenated CSS property name, for example:
+ * Camelcases a hyphenated CSS property name, for example_replace-redux:
  *
  *   > camelizeStyleName('background-color')
  *   < "backgroundColor"
@@ -18252,7 +18252,7 @@ module.exports = getUnboundedScrollPosition;
 var _uppercasePattern = /([A-Z])/g;
 
 /**
- * Hyphenates a camelcased string, for example:
+ * Hyphenates a camelcased string, for example_replace-redux:
  *
  *   > hyphenate('backgroundColor')
  *   < "background-color"
@@ -18288,7 +18288,7 @@ var hyphenate = _dereq_(142);
 var msPattern = /^ms-/;
 
 /**
- * Hyphenates a camelcased CSS property name, for example:
+ * Hyphenates a camelcased CSS property name, for example_replace-redux:
  *
  *   > hyphenateStyleName('backgroundColor')
  *   < "background-color"
@@ -18429,7 +18429,7 @@ var invariant = _dereq_(144);
 /**
  * Constructs an enumeration with keys equal to their value.
  *
- * For example:
+ * For example_replace-redux:
  *
  *   var COLORS = keyMirror({blue: null, red: null});
  *   var myColor = COLORS.blue;
