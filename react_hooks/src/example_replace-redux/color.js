@@ -2,24 +2,22 @@ import React, { createContext, useReducer } from "react";
 
 export const ColorContext = createContext({})
 
-export const UPDATE_COLOR = 'UPDATE_COLORS'
+export const UPDATE_COLOR = 'UPDATE_COLOR'
 
-const reducer = (state,action)=>{
-    switch(action.type){
+const reducer = (state, action) => {
+    switch (action.type) {
         case UPDATE_COLOR:
-            return action.color
+            return action.color;
         default:
-            return state
+            return state;
     }
 }
 
 export const Color = props => {
-
-    const [color, dispatch] = useReducer(reducer, 'blue' )
-
+    const [ color, dispatch ] = useReducer(reducer, 'blue')
     return (
         <ColorContext.Provider value={{color, dispatch}}>
-            { props.children }
+            {props.children}
         </ColorContext.Provider>
     )
 }

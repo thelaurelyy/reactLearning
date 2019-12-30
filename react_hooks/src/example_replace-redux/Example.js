@@ -1,7 +1,7 @@
-import React, { useReducer } from 'react';
-import ShowArea from './showArea';
-import Button from './Button';
-import { Color } from './color';
+import React  from "react";
+import ShowArea from './ShowArea'
+import Button from './Button'
+import { Color } from "./color";
 
 function Example() {
     return (

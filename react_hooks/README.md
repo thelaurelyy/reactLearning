@@ -11,3 +11,28 @@
     - （3）每次状态发生变化时，useEffect都进行了解绑；如果第二个参数传递空数组，就是当组件将被销毁时才进行解绑，这也就实现了componentWillUnmount的生命周期函数；
 
     - （4）useContext的作用就是 `对它所包含的组件树` 提供 `全局共享数据`。
+
+
+- 4、使用useContext和useReducer实现Redux时的注意事项：    
+
+   - （1）Color是入参为props的箭头函数： 
+    
+    
+    export const Color = props => {
+        const [ color, dispatch ] = useReducer(reducer, 'blue')
+        return (
+            <ColorContext.Provider value={{color, dispatch}}>
+                {props.children}
+            </ColorContext.Provider>
+        )
+    }
+    
+   - （2）使用中括号进行`useReducer`结构赋值；
+   
+    const [ color, dispatch ] = useReducer(reducer, 'blue')
+    
+   - （3）给子组件传值，在标签内部使用`{props.children}`
+   
+    <ColorContext.Provider value={{color, dispatch}}>
+       {props.children}
+    </ColorContext.Provider>
