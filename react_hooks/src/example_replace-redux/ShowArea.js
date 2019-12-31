@@ -1,10 +1,13 @@
-import React, { useContext } from 'react';
-import { ColorContext } from './color'
+import React, { useContext } from "react";
+import { ColorContext, UPDATE_COLOR } from "./color";
 
 function ShowArea() {
-    const { color } = useContext(ColorContext)
+    const { dispatch } = useContext(ColorContext)
     return (
-        <p style={{color: color}}>这段文字的颜色是：{color}</p>
+        <div>
+            <button onClick={ ()=>{dispatch({type:UPDATE_COLOR, color: 'purple'})} }>紫色</button>
+            <button onClick={ ()=>{dispatch({type:UPDATE_COLOR, color: 'yellow'})} }>黄色</button>
+        </div>
     )
 }
 

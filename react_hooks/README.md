@@ -27,11 +27,11 @@
         )
     }
     
-   - （2）使用中括号进行`useReducer`结构赋值；
+   - （2）使用中括号进行`useReducer`结构赋值
    
     const [ color, dispatch ] = useReducer(reducer, 'blue')
     
-   - （3）给子组件传值，在标签内部使用`{props.children}`
+   - （3）给子组件传值，在标签内部使用`{props.children}` ？？！
    
     <ColorContext.Provider value={{color, dispatch}}>
        {props.children}
