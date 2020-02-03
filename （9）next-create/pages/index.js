@@ -19,7 +19,7 @@ const Home = () => {
         <>
             <div>这是首页</div>
             <div><Link href='/jspangA?name=yy&age=18'><a>去A页面</a></Link></div>
-            <div><Link href='/jspangB?name=jspang&age=28'><a>去B页面</a></Link></div>
+            <div><Link href={{pathname: '/jspangB', query: {name: 'beautiful girl', age: 18}}}><a>去B页面</a></Link></div>
             <div>
                 <button onClick={gotoA}>前往A页面</button>
                 <button onClick={gotoB}>编程式跳转B</button>
