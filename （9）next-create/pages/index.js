@@ -58,6 +58,9 @@ const Home = () => {
                 <button onClick={gotoA}>前往A页面</button>
                 <button onClick={gotoB}>编程式跳转B</button>
             </div>
+            <div>
+                <Link href={{ pathname: '/getData', query: { menu: ['红烧带鱼', '酸辣土豆丝'] } }}><a>获取远端数据</a></Link>
+            </div>
         </>
     )
 };
