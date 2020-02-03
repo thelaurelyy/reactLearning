@@ -4,16 +4,25 @@ import Router from "next/router";
 
 const Home = () => {
     function gotoA() {
-        Router.push('/jspangA')
+        Router.push('/jspangA?name=yy&age=18')
+    }
+    function gotoB() {
+        Router.push({
+            pathname: '/jspangB',
+            query: {
+                name: 'yy',
+                age: 3
+            }
+        })
     }
     return (
         <>
             <div>这是首页</div>
-            <div><Link href='/jspangA'><a>去A页面</a></Link></div>
-            <div><Link href='/jspangB'><a>去B页面</a></Link></div>
+            <div><Link href='/jspangA?name=yy&age=18'><a>去A页面</a></Link></div>
+            <div><Link href='/jspangB?name=jspang&age=28'><a>去B页面</a></Link></div>
             <div>
                 <button onClick={gotoA}>前往A页面</button>
-                <button onClick={gotoA}>编程式跳转A</button>
+                <button onClick={gotoB}>编程式跳转B</button>
             </div>
         </>
     )
