@@ -61,6 +61,9 @@ const Home = () => {
             <div>
                 <Link href={{ pathname: '/getData', query: { menu: ['红烧带鱼', '酸辣土豆丝'] } }}><a>获取远端数据</a></Link>
             </div>
+            <div>
+                <Link href="/styleJSX"><a>利用Style JSX设置css样式</a></Link>
+            </div>
         </>
     )
 };
