@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Router from "next/router";
 import MyHeader from '../components/myHeader'
 
+import '../static/test.css'
+
 const Home = () => {
     function gotoA() {
         Router.push('/jspangA?name=yy&age=18')
