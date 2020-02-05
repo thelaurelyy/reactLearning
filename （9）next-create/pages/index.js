@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Router from "next/router";
+import MyHeader from '../components/myHeader'
 
 const Home = () => {
     function gotoA() {
@@ -50,6 +51,7 @@ const Home = () => {
 
     return (
         <>
+            <MyHeader title={'yy练习Head公共组件动态传值'} />
             <div>这是首页</div>
             <div><Link href='/jspangA?name=yy&age=18'><a>去A页面</a></Link></div>
             <div><Link href={{pathname: '/jspangB', query: {name: 'beautiful girl', age: 18}}}><a>去B页面</a></Link></div>
